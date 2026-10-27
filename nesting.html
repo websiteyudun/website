@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>主題 04：如何築巢？微型建築師解密｜獨居蜂探索館</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .bamboo-inspector {
+      background: #fffbeb;
+      border: 2px solid #d97706;
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      margin: 1.5rem 0;
+    }
+    .tube-zones {
+      display: grid;
+      grid-template-columns: 0.6fr 1.2fr 0.45fr 1.1fr 0.9fr 0.65fr;
+      gap: 6px;
+      background: #92400e;
+      padding: 14px;
+      border-radius: 16px;
+      margin: 1.25rem 0;
+      overflow-x: auto;
+      min-width: 640px;
+    }
+    .tube-zone {
+      background: #fef3c7;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      padding: 0.9rem 0.65rem;
+      text-align: center;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+    }
+    .tube-zone:hover,
+    .tube-zone.active {
+      background: #ffffff;
+      border-color: #d97706;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+    .tube-zone strong {
+      font-size: 0.86rem;
+      color: #78350f;
+    }
+    .tube-zone span {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+    }
+    .inspector-detail {
+      background: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 1.35rem;
+      border: 1px solid var(--border-soft);
+    }
+  </style>
+</head>
+<body data-page-topic="nesting">
+  <!-- 頂部導覽列 -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">🐝</span>
+        <span>獨居蜂探索館</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">📚 學習目錄</a></li>
+          <li><a href="classification.html" data-topic="classification"><span class="done-dot"></span>1. 蜜蜂與蜂的分類</a></li>
+          <li><a href="species.html" data-topic="species"><span class="done-dot"></span>2. 獨居蜂種類圖鑑</a></li>
+          <li><a href="foraging.html" data-topic="foraging"><span class="done-dot"></span>3. 覓食與超強授粉</a></li>
+          <li><a href="nesting.html" class="active" data-topic="nesting"><span class="done-dot"></span>4. 微型建築與築巢</a></li>
+          <li><a href="offspring.html" data-topic="offspring"><span class="done-dot"></span>5. 養育下一代</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 分頁標題區 -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">🏠 首頁目錄</a> <span>›</span> <span>主題 04：微型建築與築巢</span>
+      </div>
+      <h1>🎋 獨居蜂如何築巢？大自然的微型建築師與防盜智慧</h1>
+      <p>
+        獨居蜂不像西方蜜蜂會由工蜂分泌蜂蠟建造六角形大蜂巢；相反地，牠們是善用泥巴、圓形葉片、天然樹脂、植物絨毛甚至「防水塑膠膜」的微型室內設計師！
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- 1. 三大築巢派別：70% 地棲 vs 30% 洞穴與鑽木 -->
+    <section class="content-block">
+      <h2>🏡 獨居蜂住在哪裡？認識「70% 地下城」與「30% 樹洞竹管公寓」</h2>
+      <p>
+        我們常在公園看到用竹管打造的「獨居蜂旅館」，但其實住進竹管的只佔獨居蜂家族的約 30%！在自然界中，獨居蜂的築巢方式主要分為三大派別：
+      </p>
+
+      <div class="grid-3" style="margin-top: 1.25rem;">
+        <div class="info-card">
+          <h4>⛏️ 1. 地棲掘洞派（佔約 70%）</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            <strong>代表：地花蜂、隧蜂、青條花蜂、分舌蜂</strong><br />
+            雌蜂會在陽光充足、排水良好的沙質裸土或土牆向下挖掘長達 10～60 公分的地道與分支育兒室。<br /><br />
+            ✨ <strong>防水黑科技：</strong>為防止雨水淹死幼蟲，許多地棲蜂（尤其是分舌蜂 <em>Colletes</em>）會用腹部杜氏腺分泌液體塗在土壁上，乾掉後會形成一層像<strong>「天然玻璃紙／保鮮膜」</strong>般的防水抗菌內襯！
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h4>🎋 2. 洞穴租屋派（佔約 25%）</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            <strong>代表：切葉蜂、塗壁蜂（壁蜂）、樹脂蜂、泥壺蜂</strong><br />
+            牠們的大顎無法在堅硬木頭鑽孔，因此專門尋找<strong>現成的管狀洞穴</strong>——例如天牛／甲蟲在枯木留下的蛀孔、斷裂的中空竹管、蘆葦桿、芒草莖，甚至是空蝸牛殼與磚牆縫隙，再利用葉片、泥巴或樹脂隔成一間間套房。
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h4>🪚 3. 枯木鑽孔派（佔約 5%）</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            <strong>代表：大型木蜂（<em>Xylocopa</em>）、小型蘆蜂（<em>Ceratina</em>）</strong><br />
+            擁有強健的大顎肌肉，能直接在乾枯樹幹、橫樑或富含柔軟髓心的植物枝條（如玫瑰枝、懸鉤子枝）中啃出光滑的圓形隧道，並利用咬下來的木屑混合唾液壓製成房間之間的「木屑合成板」隔牆！
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 互動式竹管巢室剖面圖 -->
+    <section class="content-block">
+      <h2>🔬 互動解剖：點擊竹管巢室剖面，揭開「一房一廳＋防盜空室」秘密！</h2>
+      <p>
+        當一隻切葉蜂或塗壁蜂媽媽找到一根長約 15 公分、一端封閉的竹管時，她是如何由內而外蓋出一連串育兒室的？<strong>請點擊下方竹管剖面的各個區塊查看工程細節：</strong>
+      </p>
+
+      <div class="bamboo-inspector">
+        <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; color: #78350f;">
+          <span>⬅ 竹管最深處（竹節封閉端）</span>
+          <span>竹管洞口（對外出口）➡</span>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <div class="tube-zones" id="tube-zones">
+            <div class="tube-zone active" data-zone="back">
+              <span style="font-size: 1.5rem;">🎍</span>
+              <strong>1. 竹節底部</strong>
+              <span>封閉安全後盾</span>
+            </div>
+            <div class="tube-zone" data-zone="female-cell">
+              <span style="font-size: 1.5rem;">🍯🥚♀️</span>
+              <strong>2. 內側深處巢室</strong>
+              <span>雌蜂房＋大便當</span>
+            </div>
+            <div class="tube-zone" data-zone="partition">
+              <span style="font-size: 1.5rem;">🧱</span>
+              <strong>3. 隔間泥牆/葉牆</strong>
+              <span>獨立防火防疫牆</span>
+            </div>
+            <div class="tube-zone" data-zone="male-cell">
+              <span style="font-size: 1.5rem;">🍯🥚♂️</span>
+              <strong>4. 外側前段巢室</strong>
+              <span>雄蜂房＋小便當</span>
+            </div>
+            <div class="tube-zone" data-zone="vestibule">
+              <span style="font-size: 1.5rem;">🛡️</span>
+              <strong>5. 前庭防盜空室</strong>
+              <span>故意留空的假房間</span>
+            </div>
+            <div class="tube-zone" data-zone="plug">
+              <span style="font-size: 1.5rem;">🔒</span>
+              <strong>6. 加厚封口大門</strong>
+              <span>泥塞／多層圓葉塞</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="inspector-detail" id="zone-detail">
+          <h3 style="margin-top: 0; color: var(--forest-dark);">🎍 1. 竹節底部（封閉端與基底襯墊）</h3>
+          <p style="margin-top: 0.4rem;">
+            獨居蜂媽媽絕對不會選擇「兩頭都通」的吸管或竹管！因為後門若沒封死，寄生蜂與螞蟻就會從後方入侵。選好一端有天然竹節封閉的管洞後，蜂媽媽會先清理管內碎屑，並在最底部塗上一層薄泥巴或鋪上幾片橢圓形葉片作為防潮基底。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 如何製作真正友善的「獨居蜂旅館」 -->
+    <section class="content-block">
+      <h2>🛠️ 想在陽台或校園架設「獨居蜂旅館」？必看 5 大黃金守則</h2>
+      <p>
+        市售許多裝飾用的昆蟲旅館常犯了「孔洞太淺、鑽孔粗糙有木刺、塞滿松果（只會住進蜘蛛或耳鋏蟲）」的錯誤。想打造真正吸引獨居蜂入住的五星級產房，請把握以下原則：
+      </p>
+
+      <div class="grid-2" style="margin-top: 1.2rem;">
+        <div class="info-card">
+          <h4>📏 1. 黃金孔徑（4～10 mm）與深度（10～15 cm）</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            準備不同粗細的天然乾燥竹管或蘆葦管（內徑 4mm、6mm、8mm、10mm），深度至少 10～15 公分。若竹管太短（少於 7 公分），蜂媽媽無法構築足夠的雌蜂房，往往只會產下雄蜂或直接放棄入住！
+          </p>
+        </div>
+        <div class="info-card">
+          <h4>✨ 2. 管口平滑無木刺、一端封閉</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            獨居蜂每天進出竹管數十次，如果木頭鑽孔邊緣有尖銳木刺（毛邊），會把雌蜂透明的翅膀刮破，導致她無法飛行而餓死！請務必用砂紙將管口磨平，並確保竹管底部有竹節封閉。
+          </p>
+        </div>
+        <div class="info-card">
+          <h4>☀️ 3. 面向東南／南方、有遮雨屋頂且固定不搖晃</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            獨居蜂需要晨間陽光溫暖身體才能起飛覓食。請將蜂旅館固定在離地約 1～1.5 公尺高、不會隨風搖晃的牆面或柱子上（切忌像風鈴一樣懸掛搖晃，幼蟲從花粉團跌落會死亡），並加上斜屋頂防止雨水灌入。
+          </p>
+        </div>
+        <div class="info-card">
+          <h4>🧹 4. 可拆換設計，避免成為寄生蟲溫床</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            舊竹管使用 1～2 年後，容易累積花粉蟎、白殭菌或青蜂（杜鵑蜂）等天敵。建議使用「可抽換的竹管束」或「可打開清潔的木槽板」，待隔年春天成蜂全數羽化離開後，換上乾淨的新竹管。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 課後小測驗 -->
+    <section class="quiz-box">
+      <h3>🧠 主題四課後小測驗</h3>
+      <p style="margin-top: 0.35rem;">為什麼獨居蜂媽媽在竹管最外側（靠近洞口的大門內），常常會故意留一間「沒有放花粉也沒有產卵的空房間（前庭緩衝室 Vestibule）」？</p>
+      <div class="quiz-options">
+        <button class="quiz-option" data-correct="false" data-explain="獨居蜂媽媽封口後就會離開去尋找下一根竹管，不會自己住在裡面過冬喔！">
+          A. 為了留給獨居蜂媽媽自己冬天睡覺休息的客廳
+        </button>
+        <button class="quiz-option" data-correct="true" data-explain="太聰明了！這間空房間是防範寄生蜂（產卵管長度有限）、啄木鳥與螞蟻的「防盜緩衝區」，讓天敵刺穿大門後卻撲了個空！">
+          B. 作為「防盜緩衝區」，防止寄生蜂用長產卵管刺穿封口，或鳥類、螞蟻從洞口破壞時直接傷到裡面的蜂寶寶
+        </button>
+        <button class="quiz-option" data-correct="false" data-explain="竹管巢室在封口後是密閉的，並不是用來蓄水喔！">
+          C. 用來收集雨水給裡面的幼蟲喝水
+        </button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </section>
+
+    <!-- 分頁底部導覽 -->
+    <div class="page-nav-footer">
+      <a href="foraging.html" class="btn btn-outline">← 上一主題：3. 覓食與超強授粉</a>
+      <a href="offspring.html" class="btn btn-primary">下一主題：5. 養育下一代 →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>🐝 <strong>獨居蜂探索館 Solitary Bees Learning Hub</strong>｜主題 04：如何築巢與微型建築</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // 竹管巢室剖面互動說明
+    const zoneDescriptions = {
+      "back": {
+        title: "🎍 1. 竹節底部（封閉端與基底襯墊）",
+        text: "獨居蜂媽媽絕對不會選擇「兩頭都通」的吸管或竹管！因為後門若沒封死，寄生蜂與螞蟻就會從後方入侵。選好一端有天然竹節封閉的管洞後，蜂媽媽會先清理管內碎屑，並在最底部塗上一層薄泥巴或鋪上幾片橢圓形葉片作為防潮基底。"
+      },
+      "female-cell": {
+        title: "🍯🥚♀️ 2. 內側深處巢室（雌蜂房＋大號花粉便當）",
+        text: "竹管最深處最安全，但也是最後才能走出竹管的位置！因此蜂媽媽會先採集約 15～25 趟花粉揉成一顆「特大號花粉糧球」，並在上面產下一顆<strong>「受精卵（未來會發育成體型較大、發育期較長的雌蜂女兒）」</strong>。"
+      },
+      "partition": {
+        title: "🧱 3. 隔間牆（泥牆／圓葉片杯／樹脂牆）",
+        text: "每產完一顆卵，蜂媽媽就會立刻砌一道隔間牆把房間封起來，再蓋下一間。這樣就算其中一間幼蟲不幸感染黴菌或被寄生，隔壁房間的兄弟姊妹依然能受到隔間牆保護而平安長大！"
+      },
+      "male-cell": {
+        title: "🍯🥚♂️ 4. 外側前段巢室（雄蜂房＋小號花粉便當）",
+        text: "越靠近竹管洞口，風險越高，但也必須最先走出竹管！蜂媽媽會在前段準備較小顆的花粉球，並主動控制儲精囊不釋放精子，產下<strong>「未受精卵（發育成體型較小、提早羽化的雄蜂兒子）」</strong>，讓兒子們隔年春天先破門而出，在外面等待雌蜂羽化。"
+      },
+      "vestibule": {
+        title: "🛡️ 5. 前庭防盜空室（Vestibule 緩衝空房間）",
+        text: "大自然最令人驚嘆的建築防盜學！許多寄生蜂會停在竹管洞口，把長長的產卵管刺穿封口泥門想寄生蜂寶寶。因此獨居蜂媽媽在最外側故意留一段「空無一物的假房間」，讓寄生蜂的產卵管刺進去卻勾不到真正的育兒室！"
+      },
+      "plug": {
+        title: "🔒 6. 加厚封口大門（Closing Plug）",
+        text: "整根竹管完工的標誌！塗壁蜂與泥壺蜂會塗上比內部隔間牆厚上 2～3 倍的堅硬泥門；切葉蜂則會剪下 10～30 片正圓形葉片層層疊壓封口；樹脂蜂更會在樹脂大門黏上小碎石、木屑或死螞蟻氣味來偽裝防敵！"
+      }
+    };
+
+    document.querySelectorAll("#tube-zones .tube-zone").forEach((zoneEl) => {
+      zoneEl.addEventListener("click", () => {
+        document.querySelectorAll("#tube-zones .tube-zone").forEach((z) => z.classList.remove("active"));
+        zoneEl.classList.add("active");
+        const key = zoneEl.getAttribute("data-zone");
+        const detailBox = document.getElementById("zone-detail");
+        if (zoneDescriptions[key] && detailBox) {
+          detailBox.innerHTML = `
+            <h3 style="margin-top: 0; color: var(--forest-dark);">${zoneDescriptions[key].title}</h3>
+            <p style="margin-top: 0.4rem;">${zoneDescriptions[key].text}</p>
+          `;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

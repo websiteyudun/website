@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>主題 03：如何覓食與超強授粉？｜獨居蜂探索館</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .buzz-simulator {
+      background: linear-gradient(135deg, #f0fdfa 0%, #fef3c7 100%);
+      border: 2px solid var(--teal-accent);
+      border-radius: var(--radius-lg);
+      padding: 1.75rem;
+      text-align: center;
+      margin-top: 1.25rem;
+    }
+    @keyframes shakeAnther {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      20% { transform: translate(-4px, 2px) rotate(-3deg); }
+      40% { transform: translate(4px, -2px) rotate(3deg); }
+      60% { transform: translate(-4px, -1px) rotate(-2deg); }
+      80% { transform: translate(4px, 2px) rotate(2deg); }
+      100% { transform: translate(0, 0) rotate(0deg); }
+    }
+    .vibrating {
+      animation: shakeAnther 0.12s infinite;
+    }
+    .pollen-burst {
+      opacity: 0;
+      transition: opacity 0.35s ease, transform 0.6s ease;
+      transform: translateY(-10px) scale(0.7);
+      transform-origin: center;
+    }
+    .pollen-burst.active {
+      opacity: 1;
+      transform: translateY(12px) scale(1.1);
+    }
+  </style>
+</head>
+<body data-page-topic="foraging">
+  <!-- 頂部導覽列 -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">🐝</span>
+        <span>獨居蜂探索館</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">📚 學習目錄</a></li>
+          <li><a href="classification.html" data-topic="classification"><span class="done-dot"></span>1. 蜜蜂與蜂的分類</a></li>
+          <li><a href="species.html" data-topic="species"><span class="done-dot"></span>2. 獨居蜂種類圖鑑</a></li>
+          <li><a href="foraging.html" class="active" data-topic="foraging"><span class="done-dot"></span>3. 覓食與超強授粉</a></li>
+          <li><a href="nesting.html" data-topic="nesting"><span class="done-dot"></span>4. 微型建築與築巢</a></li>
+          <li><a href="offspring.html" data-topic="offspring"><span class="done-dot"></span>5. 養育下一代</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 分頁標題區 -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">🏠 首頁目錄</a> <span>›</span> <span>主題 03：覓食與授粉絕技</span>
+      </div>
+      <h1>🌸 獨居蜂如何覓食？揭開「1 抵 100」的超強授粉秘密</h1>
+      <p>
+        獨居蜂沒有同伴幫忙，每一顆幼蟲吃的「花粉便當」都必須由雌蜂媽媽親自飛訪上千朵花採集而成。也因為獨特的身體構造與採集方式，讓牠們成為自然界效率最高的超級授粉員！
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- 1. 獨居花蜂的菜單 -->
+    <section class="content-block">
+      <h2>🍱 獨居花蜂的菜單：為什麼不釀蜂蜜，卻狂採花粉？</h2>
+      <p>
+        對於獨居花蜂（如切葉蜂、塗壁蜂、木蜂、青條花蜂）來說，花朵提供了兩種截然不同的營養來源：
+      </p>
+      <div class="grid-2" style="margin-top: 1rem;">
+        <div class="info-card">
+          <h4>🥤 花蜜（Nectar）＝ 成蟲的飛行能量飲</h4>
+          <p style="font-size: 0.94rem; color: var(--text-muted);">
+            富含糖分與碳水化合物。雄蜂與雌蜂在花間吸食花蜜，主要是補充自己高速飛行所需的體力；雌蜂也會反芻少量花蜜混入花粉中，把鬆散的花粉揉成不會散開的團塊。
+          </p>
+        </div>
+        <div class="info-card">
+          <h4>🍞 花粉（Pollen）＝ 幼蟲的高蛋白成長便當</h4>
+          <p style="font-size: 0.94rem; color: var(--text-muted);">
+            富含蛋白質、脂質、維生素與礦物質！雌蜂一生大部分的時間都在瘋狂採集花粉，帶回巢管堆疊成一顆顆<strong>「花粉糧球（Pollen Loaf / Bee Bread）」</strong>，一顆卵配一份專屬便當。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 腹毛刷 vs 花粉籃：為什麼授粉效率差這麼多？ -->
+    <section class="content-block">
+      <h2>⚡ 科學解密：為什麼 1 隻壁蜂的授粉效率可抵 100 隻西方蜜蜂？</h2>
+      <p>
+        在日本與歐美的蘋果、櫻桃與梨子果園中，果農常飼養獨居性的「角額壁蜂（<em>Osmia cornifrons</em>）」來取代或輔助西方蜜蜂。研究發現，<strong>僅需約 250～300 隻雌壁蜂，就能完成需要 2 萬至 3 萬隻西方蜜蜂才能達成的果園授粉工作</strong>！關鍵就在牠們「攜帶花粉的工具」完全不同：
+      </p>
+
+      <div class="grid-2" style="margin-top: 1.25rem;">
+        <div class="info-card" style="background: var(--amber-light); border-color: var(--amber-primary);">
+          <h4>✨ 獨居花蜂：乾燥蓬鬆的「腹毛刷／收集毛（Scopa）」</h4>
+          <p style="font-size: 0.94rem; color: #78350f;">
+            切葉蜂與塗壁蜂的腹部下方（或其他獨居蜂的後腿全段）長滿濃密、帶靜電的硬毛，稱為<strong>「腹毛刷（Scopa）」</strong>。<br /><br />
+            👉 <strong>授粉優勢：</strong>牠們直接把<strong>乾燥、蓬鬆的花粉</strong>刷進腹毛裡，而且降落花朵時是直接「整隻趴在雄蕊與雌蕊柱頭上磨蹭」。每當牠飛往下一朵花，肚子上成千上萬顆乾花粉就會像撒胡椒粉一樣輕鬆掉落到雌蕊柱頭上，授粉成功率極高！
+          </p>
+        </div>
+
+        <div class="info-card">
+          <h4>💧 西方蜜蜂：沾濕壓實的「花粉籃（Corbicula）」</h4>
+          <p style="font-size: 0.94rem; color: var(--text-muted);">
+            社會性蜜蜂（與熊蜂）的後腳脛節外側有一塊光滑凹陷、周圍有長毛圍繞的構造，稱為<strong>「花粉籃（Corbicula）」</strong>。<br /><br />
+            👉 <strong>授粉限制：</strong>蜜蜂在採花時，會不斷分泌唾液與花蜜<strong>把花粉「弄濕」並緊緊壓實成兩顆濕黏的花粉球</strong>掛在後腳上。一旦花粉被花蜜沾濕鎖死在花粉籃裡，就很難再掉落到下一朵花的柱頭上，且濕氣也會降低部分花粉的授粉活性。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 互動模擬：震動授粉 (Buzz Pollination) -->
+    <section class="content-block">
+      <h2>🎵 獨門絕技：「震動授粉（Buzz Pollination）」互動模擬器</h2>
+      <p>
+        你知道嗎？全世界有約 8%～10% 的開花植物（包含我們愛吃的<strong>番茄、茄子、馬鈴薯、辣椒、藍莓、蔓越莓</strong>以及台灣野外的<strong>野牡丹</strong>），它們的花藥不是從側面裂開，而是長得像「胡椒罐」一樣，只在頂端有微小孔洞（稱為<strong>孔裂花藥 Poricidal anther</strong>）。
+      </p>
+      <p style="margin-top: 0.6rem;">
+        <strong>西方蜜蜂無法為這類花朵進行震動授粉！</strong>只有像<strong>青條花蜂（彩帶蜂）、木蜂、隧蜂</strong>（以及熊蜂）這類懂得「音叉共振」的蜂類，會用大顎緊緊咬住花藥錐，把翅膀解開不飛，單靠<strong>胸部飛行肌以每秒 250～400 次（Hz）的高頻率劇烈震動</strong>，將花粉從小孔裡「震噴」出來沾滿全身！
+      </p>
+
+      <div class="buzz-simulator">
+        <h3 style="color: var(--forest-dark); margin-bottom: 0.4rem;">🎛️ 親自體驗：點擊按鈕啟動青條花蜂 350 Hz 震動授粉！</h3>
+        <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+          觀察當青條花蜂抱住番茄花藥並啟動高頻胸肌震動時，孔裂花藥如何噴發出金黃色花粉雨：
+        </p>
+
+        <svg viewBox="0 0 460 220" width="100%" style="max-width: 520px; background: #ffffff; border-radius: 14px; border: 1px solid var(--border-soft); margin-bottom: 1rem;">
+          <!-- 番茄花瓣（倒垂型） -->
+          <g id="flower-anther-group" transform="translate(230, 75)">
+            <polygon points="0,-55 -45,-15 -15,-10" fill="#fde047" />
+            <polygon points="0,-55 45,-15 15,-10" fill="#fde047" />
+            <polygon points="-10,-50 -60,5 -20,0" fill="#facc15" />
+            <polygon points="10,-50 60,5 20,0" fill="#facc15" />
+            <!-- 孔裂花藥錐 (胡椒罐構造) -->
+            <polygon points="-16,-25 16,-25 9,38 -9,38" fill="#eab308" stroke="#a16207" stroke-width="2" />
+            <circle cx="-4" cy="36" r="2.5" fill="#422006" />
+            <circle cx="4" cy="36" r="2.5" fill="#422006" />
+            <text x="26" y="10" font-size="11" fill="#78350f" font-weight="bold">← 孔裂花藥（頂端小孔）</text>
+
+            <!-- 青條花蜂抱住花藥 -->
+            <g id="buzz-bee" transform="translate(-28, 22)">
+              <ellipse cx="-18" cy="10" rx="18" ry="12" fill="#1e293b" />
+              <!-- 蒂芬妮藍綠條紋 -->
+              <path d="M-26,0 Q-18,10 -26,20" stroke="#2dd4bf" stroke-width="4" fill="none" />
+              <path d="M-16,-2 Q-8,10 -16,22" stroke="#2dd4bf" stroke-width="4" fill="none" />
+              <circle cx="2" cy="6" r="11" fill="#78716c" />
+              <circle cx="14" cy="3" r="8" fill="#1e293b" />
+              <ellipse cx="-6" cy="-6" rx="15" ry="6" fill="#e2e8f0" opacity="0.85" />
+            </g>
+          </g>
+
+          <!-- 噴發的花粉粒子 -->
+          <g id="pollen-particles" class="pollen-burst">
+            <circle cx="222" cy="135" r="4" fill="#f59e0b" />
+            <circle cx="238" cy="142" r="3.5" fill="#facc15" />
+            <circle cx="210" cy="152" r="4.5" fill="#d97706" />
+            <circle cx="248" cy="158" r="4" fill="#f59e0b" />
+            <circle cx="228" cy="165" r="5" fill="#eab308" />
+            <circle cx="195" cy="168" r="3.5" fill="#f59e0b" />
+            <circle cx="262" cy="172" r="4" fill="#d97706" />
+            <circle cx="218" cy="182" r="4.5" fill="#facc15" />
+            <circle cx="242" cy="186" r="3.5" fill="#f59e0b" />
+            <text x="145" y="206" font-size="13" font-weight="bold" fill="#b45309">✨ 嗡嗡嗡！高頻率震動讓花粉從小孔大量噴出！</text>
+          </g>
+        </svg>
+
+        <div>
+          <button id="trigger-buzz-btn" class="btn btn-primary">🔊 點擊啟動「震動授粉」(350 Hz)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 捕食性獨居蜂的覓食：麻醉保鮮術 -->
+    <section class="content-block">
+      <h2>🗡️ 同場加映：肉食派獨居蜂（泥壺蜂／穴蜂）的「活體冷凍庫」麻醉術</h2>
+      <p>
+        還記得主題一提到的廣義獨居蜂鄰居——<strong>泥壺蜂（蜾蠃）、泥蜂與穴蜂</strong>嗎？成蟲雖然也吸食花蜜，但牠們為寶寶準備的便當不是花粉，而是<strong>新鮮的毛毛蟲、尺蠖、螽斯或蜘蛛</strong>！
+      </p>
+      <div class="callout forest">
+        <strong>🧠 為什麼獵物關在竹管裡好幾天都不會腐爛？</strong><br />
+        如果泥壺蜂媽媽直接把毛毛蟲咬死塞進竹管，高溫下不到兩天蟲屍就會發臭腐敗，幼蟲吃了也會生病。因此，泥壺蜂媽媽會用螫針精準刺入毛毛蟲的<strong>腹神經節注射神經毒素，將毛毛蟲「全身麻醉卻維持心跳與呼吸」</strong>！這樣一來，竹管裡的 5～10 隻毛毛蟲就像保存在「活體保鮮室」一樣，讓孵化後的幼蟲能吃到最新鮮的食物，同時也幫農夫消滅了大量農業害蟲。
+      </div>
+    </section>
+
+    <!-- 課後小測驗 -->
+    <section class="quiz-box">
+      <h3>🧠 主題三課後小測驗</h3>
+      <p style="margin-top: 0.35rem;">為什麼溫室栽種番茄或茄子時，青條花蜂、木蜂或熊蜂的授粉效果遠勝過一般的西方蜜蜂？</p>
+      <div class="quiz-options">
+        <button class="quiz-option" data-correct="false" data-explain="番茄的花其實沒有花蜜，而且關鍵不在於舌頭長短，而在於「孔裂花藥」需要高頻震動才能釋放花粉喔！">
+          A. 因為番茄的花蜜藏在很深的地方，只有舌頭長的蜂才喝得到
+        </button>
+        <button class="quiz-option" data-correct="true" data-explain="完全正確！番茄屬於「孔裂花藥」，必須靠青條花蜂、木蜂或熊蜂進行高頻率的「震動授粉（Buzz Pollination）」，才能把花粉從小孔震出來。">
+          B. 因為番茄的花藥只在頂端開小孔（孔裂花藥），需要靠「震動授粉（Buzz Pollination）」高頻震動才能震出花粉
+        </button>
+        <button class="quiz-option" data-correct="false" data-explain="番茄花主要在白天開放，並不是夜間開花植物喔！">
+          C. 因為番茄只在半夜開花，而獨居蜂是夜行性昆蟲
+        </button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </section>
+
+    <!-- 分頁底部導覽 -->
+    <div class="page-nav-footer">
+      <a href="species.html" class="btn btn-outline">← 上一主題：2. 獨居蜂種類圖鑑</a>
+      <a href="nesting.html" class="btn btn-primary">下一主題：4. 微型建築與築巢 →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>🐝 <strong>獨居蜂探索館 Solitary Bees Learning Hub</strong>｜主題 03：如何覓食與超強授粉</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // 震動授粉互動模擬器
+    const buzzBtn = document.getElementById("trigger-buzz-btn");
+    const antherGroup = document.getElementById("flower-anther-group");
+    const pollenParticles = document.getElementById("pollen-particles");
+
+    if (buzzBtn && antherGroup && pollenParticles) {
+      buzzBtn.addEventListener("click", () => {
+        antherGroup.classList.add("vibrating");
+        pollenParticles.classList.add("active");
+        buzzBtn.textContent = "🐝 嗡嗡嗡震動中...(350 Hz 共振釋放花粉)";
+
+        setTimeout(() => {
+          antherGroup.classList.remove("vibrating");
+          buzzBtn.textContent = "🔊 再次啟動「震動授粉」(350 Hz)";
+        }, 1800);
+      });
+    }
+  </script>
+</body>
+</html>

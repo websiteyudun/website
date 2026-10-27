@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>主題 05：如何養育下一代？生命週期與性別控制｜獨居蜂探索館</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .lifecycle-tabs {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 0.85rem;
+      margin: 1.25rem 0;
+    }
+    .stage-btn {
+      background: var(--bg-warm);
+      border: 2px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      text-align: left;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .stage-btn:hover {
+      border-color: var(--amber-primary);
+      background: #ffffff;
+    }
+    .stage-btn.active {
+      background: var(--amber-light);
+      border-color: var(--amber-primary);
+      box-shadow: var(--shadow-sm);
+    }
+    .stage-btn strong {
+      display: block;
+      font-size: 1.02rem;
+      color: var(--forest-dark);
+      margin-bottom: 0.25rem;
+    }
+    .stage-btn span {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .stage-display {
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 1.65rem;
+      box-shadow: var(--shadow-sm);
+    }
+    .gender-card {
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      border: 2px solid;
+    }
+  </style>
+</head>
+<body data-page-topic="offspring">
+  <!-- 頂部導覽列 -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">🐝</span>
+        <span>獨居蜂探索館</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">📚 學習目錄</a></li>
+          <li><a href="classification.html" data-topic="classification"><span class="done-dot"></span>1. 蜜蜂與蜂的分類</a></li>
+          <li><a href="species.html" data-topic="species"><span class="done-dot"></span>2. 獨居蜂種類圖鑑</a></li>
+          <li><a href="foraging.html" data-topic="foraging"><span class="done-dot"></span>3. 覓食與超強授粉</a></li>
+          <li><a href="nesting.html" data-topic="nesting"><span class="done-dot"></span>4. 微型建築與築巢</a></li>
+          <li><a href="offspring.html" class="active" data-topic="offspring"><span class="done-dot"></span>5. 養育下一代</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 分頁標題區 -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">🏠 首頁目錄</a> <span>›</span> <span>主題 05：繁衍與養育下一代</span>
+      </div>
+      <h1>🥚 獨居蜂如何養育下一代？內建性別控制與滿滿母愛</h1>
+      <p>
+        多數獨居蜂媽媽在封上竹管泥門的那一刻，這輩子就再也不會見到自己的孩子了。但她在短短數週的成蟲生命裡，早已把孩子長大所需的一切——從營養均衡的花粉便當、防水抗菌的套房，到精準的出房順序——全都安排得天衣無縫！
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- 1. 單倍二倍體性別決定與「內雌外雄」智慧 -->
+    <section class="content-block">
+      <h2>🧬 蜂媽媽的超能力：自由決定生女兒或生兒子！</h2>
+      <p>
+        膜翅目昆蟲（所有的蜂與螞蟻）都擁有神奇的<strong>「單倍二倍體性別決定系統（Haplodiploidy）」</strong>。雌蜂在剛羽化交配後，會將精子儲存在自己腹部的「受精囊（Spermatheca）」裡，並在產卵時依照<strong>花粉球的大小與竹管深淺位置</strong>，自由控制受精囊的肌肉閥門：
+      </p>
+
+      <div class="grid-2" style="margin-top: 1.25rem;">
+        <div class="gender-card" style="background: #fdf2f8; border-color: #ec4899;">
+          <span class="badge-pill" style="background: #fce7f3; color: #9d174d;">竹管深處（內側安全房）</span>
+          <h3 style="margin-top: 0.2rem; color: #831843;">♀️ 釋放精子 ＝ 受精卵（二倍體 2n）→ 發育成「雌蜂（女兒）」</h3>
+          <p style="font-size: 0.94rem; color: #701a75; margin-top: 0.5rem;">
+            <strong>為什麼女兒住最裡面？</strong><br />
+            1. <strong>體型較大、發育較慢：</strong>雌蜂未來要負責築巢與產卵，體型比雄蜂大，因此媽媽會為她準備<strong>特大號的花粉球</strong>。<br />
+            2. <strong>最安全的VIP包廂：</strong>竹管深處離洞口最遠，最不容易遭受寄生蜂刺穿或天敵破壞，能確保珍貴的雌蜂平安長大。
+          </p>
+        </div>
+
+        <div class="gender-card" style="background: #eff6ff; border-color: #3b82f6;">
+          <span class="badge-pill" style="background: #dbeafe; color: #1e40af;">竹管前段（靠近洞口處）</span>
+          <h3 style="margin-top: 0.2rem; color: #1e3a8a;">♂️ 不釋放精子 ＝ 未受精卵（單倍體 n）→ 發育成「雄蜂（兒子）」</h3>
+          <p style="font-size: 0.94rem; color: #1e3a8a; margin-top: 0.5rem;">
+            <strong>為什麼兒子住最外面？</strong><br />
+            1. <strong>防止塞車的絕妙排程：</strong>雄蜂體型小、發育快，隔年春天會比雌蜂<strong>提早好幾天破繭羽化</strong>！住在靠近洞口的外側，兒子們就能率先把泥門咬破飛出去，完全不會踩傷或吵醒裡面還在睡覺的姊妹！<br />
+            2. <strong>守門員角色：</strong>萬一洞口遭受掠食者攻擊，外層的雄蜂房也承擔了保護深處雌蜂的風險。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. 完全變態四階段生命週期互動探索 -->
+    <section class="content-block">
+      <h2>⏳ 互動時間軸：竹管封口之後，裡面發生了什麼事？</h2>
+      <p>
+        獨居蜂屬於<strong>「完全變態（Holometabolism）」</strong>昆蟲，一生經歷「卵 → 幼蟲 → 蛹 → 成蟲」四個階段。點擊下方四個時期，一探密封竹管內的成長過程：
+      </p>
+
+      <div class="lifecycle-tabs" id="lifecycle-tabs">
+        <button class="stage-btn active" data-stage="egg">
+          <strong>階段 1：產卵期 (Egg)</strong>
+          <span>約持續 3～7 天</span>
+        </button>
+        <button class="stage-btn" data-stage="larva">
+          <strong>階段 2：幼蟲期 (Larva)</strong>
+          <span>約持續 2～4 週（狂吃便當）</span>
+        </button>
+        <button class="stage-btn" data-stage="pupa">
+          <strong>階段 3：結繭與化蛹滯育</strong>
+          <span>度過漫長秋冬（數週至數月）</span>
+        </button>
+        <button class="stage-btn" data-stage="adult">
+          <strong>階段 4：破繭羽化出房</strong>
+          <span>溫暖季節來臨（4～6 週壽命）</span>
+        </button>
+      </div>
+
+      <div class="stage-display" id="stage-display">
+        <h3 style="margin-top: 0; color: var(--forest-dark);">🥚 階段 1：產卵期（在花粉麵包上誕生的珍珠）</h3>
+        <p style="margin-top: 0.5rem;">
+          獨居蜂媽媽在揉好的花粉糧球（或泥壺蜂準備好的麻醉毛毛蟲）上方，產下一顆長約 2～4 mm、潔白晶瑩如小彎月的卵，隨後立刻砌起隔間牆封閉房間。這顆卵在黑暗溫暖的巢室裡靜靜發育，約 3 到 7 天後就會孵化出白白胖胖的無足幼蟲。
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. 蜂旅館裡的不速之客：杜鵑蜂（勞動寄生蜂） -->
+    <section class="content-block">
+      <h2>🎭 巢管裡的諜對諜：認識「杜鵑蜂（Cuckoo Bees）」借巢寄生現象</h2>
+      <p>
+        在觀察獨居蜂築巢時，你可能會看到一些外型截然不同、甚至全身閃耀紅藍綠寶石光澤的蜂在竹管口鬼鬼祟祟地張望。牠們正是自然界演化出的<strong>「勞動寄生蜂（Kleptoparasites，俗稱杜鵑蜂）」</strong>！
+      </p>
+
+      <div class="grid-2" style="margin-top: 1rem;">
+        <div class="info-card">
+          <h4>💎 寶石青蜂（Chrysididae / Cuckoo Wasps）</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            全身披著璀璨的藍綠色或紫紅色金屬盔甲，遇到危險時能像穿山甲一樣把身體捲成一顆球！牠們會趁泥壺蜂或塗壁蜂媽媽外出採集時，偷偷潛入還沒封口的竹管產卵。青蜂幼蟲孵化後，會搶吃宿主準備的食物或寄生於宿主幼蟲。
+          </p>
+        </div>
+        <div class="info-card">
+          <h4>🗡️ 尖腹蜂（<em>Coelioxys</em> 屬）</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            切葉蜂的專屬「杜鵑鳥」！牠們自己也屬於切葉蜂科，卻演化到<strong>完全失去腹毛刷（自己不會採花粉也不會剪葉子）</strong>，腹部末端尖細如錐子。牠會趁切葉蜂媽媽出門剪葉片時溜進巢室產卵，讓自己的孩子白吃切葉蜂媽媽辛苦採集的花粉球！
+          </p>
+        </div>
+      </div>
+
+      <div class="callout forest" style="margin-top: 1.25rem;">
+        <strong>🌿 生態學家的視角：需要消滅杜鵑蜂嗎？</strong><br />
+        在自然生態系中，青蜂與尖腹蜂也是本土生物多樣性的一環，牠們的存在正好證明了你周遭的獨居蜂族群非常繁盛！只要定期在每年春季羽化後替換乾淨竹管，就能維持宿主與寄生者之間的健康平衡。
+      </div>
+    </section>
+
+    <!-- 課後小測驗 -->
+    <section class="quiz-box">
+      <h3>🧠 主題五課後小測驗</h3>
+      <p style="margin-top: 0.35rem;">請問獨居蜂媽媽在築巢時，為什麼總是把「雌蜂卵（女兒）」放在竹管最深處，而把「雄蜂卵（兒子）」放在靠近洞口的外側？</p>
+      <div class="quiz-options">
+        <button class="quiz-option" data-correct="true" data-explain="完全正確！雄蜂體型小、發育較快，放在外側才能率先咬破泥門出房，不會破壞深處還在發育的雌蜂房間；同時也讓珍貴的雌蜂在最深處獲得最佳保護！">
+          A. 因為雄蜂發育較快會先羽化，放外側才不會踩壞深處還沒羽化的雌蜂，且深處最安全能保護雌蜂
+        </button>
+        <button class="quiz-option" data-correct="false" data-explain="事實正好相反喔！雌蜂的體型比雄蜂更大，而且只有雌蜂才有螫針（產卵管特化），雄蜂是完全沒有螫針的！">
+          B. 因為雄蜂體型比較巨大又有強力螫針，可以站在門口當保鑣叮咬敵人
+        </button>
+        <button class="quiz-option" data-correct="false" data-explain="獨居蜂媽媽在封口後就離開了，並不會從洞口開門餵食幼蟲喔！">
+          C. 因為放在洞口比較方便蜂媽媽每天開門餵兒子吃飯
+        </button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </section>
+
+    <!-- 完成全部學習祝賀卡 -->
+    <section class="content-block" style="background: linear-gradient(135deg, var(--forest-light) 0%, var(--amber-light) 100%); text-align: center;">
+      <h2 style="justify-content: center; border-bottom: none; padding-bottom: 0;">🎉 恭喜你完成「獨居蜂探索館」五大核心主題！</h2>
+      <p style="max-width: 680px; margin: 0.5rem auto 1.25rem; color: var(--text-dark);">
+        現在你已經懂得如何分辨花蜂與狩獵蜂、認識切葉蜂與塗壁蜂等工藝大師，也了解了腹毛刷、震動授粉、竹管防盜空室以及內雌外雄的育兒智慧。下次在花園裡遇見這些忙碌的小身影時，別忘了溫柔地向牠們打聲招呼！
+      </p>
+      <a href="index.html" class="btn btn-primary">🏠 返回學習目錄查看 100% 完成徽章</a>
+    </section>
+
+    <!-- 分頁底部導覽 -->
+    <div class="page-nav-footer">
+      <a href="nesting.html" class="btn btn-outline">← 上一主題：4. 微型建築與築巢</a>
+      <a href="index.html" class="btn btn-primary">返回首頁學習目錄 🏠</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>🐝 <strong>獨居蜂探索館 Solitary Bees Learning Hub</strong>｜主題 05：如何養育下一代</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // 四階段生命週期切換邏輯
+    const stageData = {
+      egg: {
+        title: "🥚 階段 1：產卵期（在花粉麵包上誕生的珍珠）",
+        desc: "獨居蜂媽媽在揉好的花粉糧球（或泥壺蜂準備好的麻醉毛毛蟲）上方，產下一顆長約 2～4 mm、潔白晶瑩如小彎月的卵，隨後立刻砌起隔間牆封閉房間。這顆卵在黑暗溫暖的巢室裡靜靜發育，約 3 到 7 天後就會孵化出白白胖胖的無足幼蟲。"
+      },
+      larva: {
+        title: "🐛 階段 2：幼蟲期（乖乖吃光媽媽準備的營養便當）",
+        desc: "孵化後的幼蟲沒有腳，整天趴在媽媽準備的花粉糧球上大口進食，歷經 4～5 次蛻皮迅速長大。最特別的是，獨居蜂幼蟲在整個進食期間<strong>「中腸與後腸是不相通的（不會排便）」</strong>，這樣才不會把自己的密閉小房間與食物弄髒！直到把整顆花粉便當吃得一乾二淨後，才會一次性排出乾燥的糞粒於角落。"
+      },
+      pupa: {
+        title: "🧶 階段 3：結繭與化蛹期（在絲繭睡袋裡度過漫長秋冬）",
+        desc: "吃飽的終齡幼蟲會吐絲織出一個堅韌防水的<strong>「繭（Cocoon）」</strong>將自己包覆起來，並在繭內化蛹（或以預蛹／成蟲型態進入冬季「滯育 Diapause」）。無論外頭颳風下雨或寒流來襲，牠們都在竹管與絲繭的雙重保護下安穩沉睡。"
+      },
+      adult: {
+        title: "🐝 階段 4：破繭羽化出房（迎接春光的新世代）",
+        desc: "當隔年春天氣溫回升、花朵綻放時，竹管外側的<strong>雄蜂會率先咬破絲繭與泥牆飛出竹管</strong>，在附近花叢補充花蜜並等待幾天候陸續出房的雌蜂。雌蜂一羽化出房並完成交配後，休息 1～2 天便會開始尋找新的竹管與花朵，展開新一輪充滿母愛的築巢循環！"
+      }
+    };
+
+    document.querySelectorAll("#lifecycle-tabs .stage-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#lifecycle-tabs .stage-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const key = btn.getAttribute("data-stage");
+        const display = document.getElementById("stage-display");
+        if (stageData[key] && display) {
+          display.innerHTML = `
+            <h3 style="margin-top: 0; color: var(--forest-dark);">${stageData[key].title}</h3>
+            <p style="margin-top: 0.5rem;">${stageData[key].desc}</p>
+          `;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

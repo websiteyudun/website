@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>主題 01：生物上如何分類蜜蜂與蜂？｜獨居蜂探索館</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .tree-diagram {
+      background: var(--bg-warm);
+      border-radius: var(--radius-md);
+      padding: 1.5rem;
+      border: 1px solid var(--border-soft);
+      margin: 1.25rem 0;
+    }
+    .tree-level {
+      border-left: 3px solid var(--forest-primary);
+      padding-left: 1.25rem;
+      margin: 0.85rem 0 0.85rem 0.75rem;
+    }
+    .tree-node {
+      background: #ffffff;
+      border: 1px solid var(--border-soft);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      margin-bottom: 0.65rem;
+      display: inline-block;
+      box-shadow: var(--shadow-sm);
+    }
+    .tree-node.highlight {
+      border-color: var(--amber-primary);
+      background: var(--amber-light);
+    }
+    .circle-layers {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.2rem;
+    }
+    .layer-card {
+      border-radius: var(--radius-md);
+      padding: 1.35rem;
+      border: 2px solid transparent;
+    }
+  </style>
+</head>
+<body data-page-topic="classification">
+  <!-- 頂部導覽列 -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">🐝</span>
+        <span>獨居蜂探索館</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">📚 學習目錄</a></li>
+          <li><a href="classification.html" class="active" data-topic="classification"><span class="done-dot"></span>1. 蜜蜂與蜂的分類</a></li>
+          <li><a href="species.html" data-topic="species"><span class="done-dot"></span>2. 獨居蜂種類圖鑑</a></li>
+          <li><a href="foraging.html" data-topic="foraging"><span class="done-dot"></span>3. 覓食與超強授粉</a></li>
+          <li><a href="nesting.html" data-topic="nesting"><span class="done-dot"></span>4. 微型建築與築巢</a></li>
+          <li><a href="offspring.html" data-topic="offspring"><span class="done-dot"></span>5. 養育下一代</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 分頁標題區 -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">🏠 首頁目錄</a> <span>›</span> <span>主題 01：生物分類學</span>
+      </div>
+      <h1>🧬 生物上如何分類「蜜蜂」與「蜂」？</h1>
+      <p>
+        在中文裡，我們常把所有會飛、有條紋的昆蟲都統稱為「蜂」或「蜜蜂」。但在生物分類學上，「蜂」、「花蜂（Bees）」與「蜜蜂（Honey Bees）」有著截然不同的演化地位與飲食習慣！
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- 1. 三層同心圓概念 -->
+    <section class="content-block">
+      <h2>🎯 一張圖秒懂：「蜂」＞「花蜂（Bees）」＞「蜜蜂（Honey Bees）」</h2>
+      <p>
+        為什麼英文會區分 <strong>Wasp（胡蜂／狩獵蜂）</strong>、<strong>Bee（花蜂／廣義蜜蜂）</strong> 與 <strong>Honey Bee（蜜蜂屬）</strong>，而中文卻容易搞混？讓我們用「三層包含關係」來釐清：
+      </p>
+
+      <div class="circle-layers">
+        <div class="layer-card" style="background: #f1f5f9; border-color: #94a3b8;">
+          <span class="badge-pill" style="background: #e2e8f0; color: #1e293b;">第一層（最大範圍）</span>
+          <h3 style="margin-top: 0.25rem; color: #1e293b;">🐝 廣義的「蜂類」<br /><small style="font-size: 0.85rem;">膜翅目細腰亞目（不含螞蟻）</small></h3>
+          <p style="font-size: 0.93rem; color: var(--text-muted); margin-top: 0.5rem;">
+            包含全球超過 10 萬種寄生蜂、胡蜂、泥壺蜂、蛛蜂、泥蜂以及所有花蜂。<strong>早期祖先都是吃葷的（捕食其他昆蟲或寄生）</strong>。
+          </p>
+        </div>
+
+        <div class="layer-card" style="background: var(--forest-light); border-color: var(--forest-primary);">
+          <span class="badge-pill" style="background: #bbf7d0; color: #14532d;">第二層（轉行吃素的花蜂）</span>
+          <h3 style="margin-top: 0.25rem; color: var(--forest-dark);">🌸 花蜂類（Anthophila / Bees）<br /><small style="font-size: 0.85rem;">全球約 20,000 多種</small></h3>
+          <p style="font-size: 0.93rem; color: var(--text-muted); margin-top: 0.5rem;">
+            約在 1.2 億年前與開花植物共同演化，從狩獵蜂中分支出來<strong>「改吃全素」</strong>！改採集<strong>花粉（蛋白質）與花蜜（碳水化合物）</strong>育幼。<strong>其中 90% 以上都是獨居蜂！</strong>
+          </p>
+        </div>
+
+        <div class="layer-card" style="background: var(--amber-light); border-color: var(--amber-primary);">
+          <span class="badge-pill">第三層（極少數產蜜群居派）</span>
+          <h3 style="margin-top: 0.25rem; color: #78350f;">🍯 狹義「蜜蜂屬」（Genus <em>Apis</em>）<br /><small style="font-size: 0.85rem;">全球僅約 8～11 種！</small></h3>
+          <p style="font-size: 0.93rem; color: #78350f; margin-top: 0.5rem;">
+            也就是我們熟知的<strong>西方蜜蜂（義大利蜂）</strong>與<strong>東方蜜蜂（中國蜂）</strong>。牠們屬於高度「真社會性」，有女王蜂、數萬隻工蜂，並會釀造大量液態蜂蜜。
+          </p>
+        </div>
+      </div>
+
+      <div class="callout" style="margin-top: 1.5rem;">
+        <strong>💡 重要科普觀念：</strong>
+        在生態學與日常推廣中，我們所說的<strong>「獨居蜂（Solitary Bees and Wasps）」</strong>，狹義是指<strong>獨居性的花蜂（如切葉蜂、壁蜂、木蜂、彩帶蜂）</strong>；廣義則還會納入同樣獨自築巢、常入住獨居蜂旅館幫忙抓害蟲的<strong>獨居性狩獵蜂（如泥壺蜂、蜾蠃、穴蜂）</strong>！
+      </div>
+    </section>
+
+    <!-- 2. 膜翅目演化分類樹 -->
+    <section class="content-block">
+      <h2>🌳 膜翅目（Hymenoptera）生物分類樹</h2>
+      <p>
+        在動物界 ＞ 節肢動物門 ＞ 昆蟲綱中，所有的蜂與螞蟻都屬於<strong>「膜翅目（Hymenoptera）」</strong>（意指擁有兩對透明膜質翅膀，且前後翅以微小翅鉤連動的昆蟲）：
+      </p>
+
+      <div class="tree-diagram">
+        <div class="tree-node"><strong>節肢動物門 ＞ 昆蟲綱 ＞ 膜翅目 (Hymenoptera)</strong></div>
+        <div class="tree-level">
+          <div class="tree-node">
+            🌱 <strong>廣腰亞目 (Symphyta)</strong>：胸部與腹部之間沒有細腰（如：葉蜂、樹蜂），幼蟲長得像毛毛蟲，多以植物葉片為食。
+          </div>
+          <br />
+          <div class="tree-node">
+            ⏳ <strong>細腰亞目 (Apocrita)</strong>：擁有明顯的「蜂腰」（腹柄節），行動靈活！
+          </div>
+          <div class="tree-level">
+            <div class="tree-node">
+              🥚 <strong>寄生蜂類 (Parasitica)</strong>：產卵管用來將卵產在其他昆蟲體內或體表（如：姬蜂、小繭蜂），是農業害蟲的天然剋星。
+            </div>
+            <br />
+            <div class="tree-node">
+              🗡️ <strong>針尾下目 (Aculeata)</strong>：雌蟲的產卵管特化成<strong>「螫針（Stinger）」</strong>，用來防衛或麻醉獵物（因此雄蜂通通沒有螫針！）。
+            </div>
+            <div class="tree-level">
+              <div class="tree-node">
+                🐜 <strong>胡蜂總科 / 蟻總科等 (Vespoidea / Formicoidea)</strong>：包含螞蟻、社會性的虎頭蜂／長腳蜂，以及<strong>獨居性的泥壺蜂（Eumeninae）</strong>。
+              </div>
+              <br />
+              <div class="tree-node highlight">
+                🌸 <strong>蜜蜂總科 (Apoidea)</strong>：包含「銀口蜂／泥蜂類（Spheciformes，捕食昆蟲的獨居狩獵蜂）」與<strong>「花蜂類（Anthophila，共 7 大科：切葉蜂科、蜜蜂科、隧蜂科、地花蜂科、分舌蜂科、準蜂科、Stenotritidae）」</strong>！
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 素食花蜂 vs 肉食狩獵蜂 vs 社會性蜜蜂 比較表 -->
+    <section class="content-block">
+      <h2>🔬 超實用對照表：獨居花蜂 vs 社會性蜜蜂 vs 獨居狩獵蜂（泥壺蜂）</h2>
+      <p>下次在花園或獨居蜂旅館前觀察時，只要看<strong>「體毛」、「後腳/腹部花粉」與「築巢食材」</strong>，就能輕鬆分辨牠們：</p>
+
+      <div class="table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>比較項目</th>
+              <th>🌼 獨居花蜂（切葉蜂、壁蜂、木蜂等）</th>
+              <th>🍯 社會性蜜蜂（東方／西方蜜蜂）</th>
+              <th>🏺 獨居狩獵蜂（泥壺蜂、蜾蠃等）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>分類地位</strong></td>
+              <td>蜜蜂總科 — 花蜂類 (Anthophila)</td>
+              <td>蜜蜂總科 — 蜜蜂科蜜蜂屬 (<em>Apis</em>)</td>
+              <td>胡蜂總科／蜜蜂總科泥蜂類</td>
+            </tr>
+            <tr>
+              <td><strong>幼蟲食物（食性）</strong></td>
+              <td>🌱 <strong>全素食</strong>：花粉＋花蜜捏成的「花粉團」</td>
+              <td>🌱 <strong>全素食</strong>：蜂王乳、蜂蜜、蜂糧（花粉）</td>
+              <td>🐛 <strong>肉食性</strong>：被螫針麻醉保鮮的毛毛蟲、尺蠖或蜘蛛</td>
+            </tr>
+            <tr>
+              <td><strong>外觀體毛特徵</strong></td>
+              <td>全身覆蓋濃密<strong>分叉羽狀絨毛</strong>（極易沾附花粉）</td>
+              <td>有分叉絨毛，後足具光滑凹槽「花粉籃」</td>
+              <td>身體表面<strong>較光滑少毛</strong>，腰部極細長</td>
+            </tr>
+            <tr>
+              <td><strong>社會結構</strong></td>
+              <td><strong>獨居性</strong>（無蜂王、無工蜂，雌蜂獨力育幼）</td>
+              <td><strong>真社會性</strong>（1 隻蜂王＋數萬工蜂＋雄蜂）</td>
+              <td><strong>獨居性</strong>（雌蜂獨力築泥巢、抓蟲、產卵）</td>
+            </tr>
+            <tr>
+              <td><strong>是否產蜂蜜？</strong></td>
+              <td>❌ 不釀造儲存液態蜂蜜</td>
+              <td>✅ 大量釀造並封存蜂蜜以供蜂群度冬</td>
+              <td>❌ 不產蜜（成蟲僅吸食少量花蜜補充體力）</td>
+            </tr>
+            <tr>
+              <td><strong>攻擊性與螫針</strong></td>
+              <td>🟢 <strong>極溫馴</strong>，平時幾乎不螫人，螫針無倒鉤</td>
+              <td>🟡 具護巢本能，工蜂螫針有倒鉤（螫人後會死）</td>
+              <td>🟢 <strong>溫馴膽小</strong>，無群體護巢行為，螫針主要麻醉獵物</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 4. 社會性光譜與互動辨識器 -->
+    <section class="content-block">
+      <h2>🕵️ 互動練習：你在花園遇見的是哪一種蜂？</h2>
+      <p>點擊下方你在戶外觀察到的特徵，系統會幫你即時判斷牠屬於哪個生物分類家族：</p>
+
+      <div class="filter-bar" id="id-helper-buttons">
+        <button class="filter-btn active" data-case="case1">特徵 A：肚子底下毛茸茸沾滿金黃色粉末，正咬著圓形葉片鑽進竹管</button>
+        <button class="filter-btn" data-case="case2">特徵 B：身體光滑黑黃相間、腰很細，嘴裡叼著一隻綠色毛毛蟲鑽進竹管</button>
+        <button class="filter-btn" data-case="case3">特徵 C：後腳外側有一坨圓圓亮亮的濕花粉球，飛回有好幾萬隻同伴的大蜂箱</button>
+      </div>
+
+      <div id="id-helper-result" class="info-card" style="background: var(--forest-light); border-color: var(--forest-primary);">
+        <h4>🔍 鑑定結果：獨居性花蜂 — 切葉蜂科（Megachilidae）</h4>
+        <p>
+          <strong>分類解析：</strong>牠屬於<strong>蜜蜂總科 ＞ 花蜂類（Anthophila） ＞ 切葉蜂科</strong>。腹部的金黃色粉末是牠用「腹毛刷（Scopa）」採集的乾花粉，咬著葉片是為了在竹管裡捲成育嬰袋，是百分百吃素、溫馴且授粉力超強的獨居花蜂！
+        </p>
+      </div>
+    </section>
+
+    <!-- 課後小測驗 -->
+    <section class="quiz-box">
+      <h3>🧠 主題一課後小測驗</h3>
+      <p style="margin-top: 0.35rem;">請問在生物分類與演化上，「花蜂（Bees，包含切葉蜂、壁蜂、木蜂與蜜蜂）」與「胡蜂／泥壺蜂（Wasps）」最關鍵的差異是什麼？</p>
+      <div class="quiz-options">
+        <button class="quiz-option" data-correct="false" data-explain="花蜂與胡蜂都有兩對翅膀（前翅與後翅），且都屬於膜翅目細腰亞目喔！">
+          A. 花蜂只有一對翅膀，而胡蜂有兩對翅膀
+        </button>
+        <button class="quiz-option" data-correct="true" data-explain="完全正確！花蜂演化出分叉羽狀體毛，並改採集花粉與花蜜（全素食）來餵養幼蟲；而胡蜂／泥壺蜂則維持祖先捕食昆蟲或蜘蛛（肉食性）育幼的習性。">
+          B. 花蜂全身有分叉絨毛且採集「花粉與花蜜（素食）」育幼；胡蜂身體較光滑且捕捉「昆蟲或蜘蛛（肉食）」育幼
+        </button>
+        <button class="quiz-option" data-correct="false" data-explain="全球超過 90% 的花蜂都是不產液態蜂蜜的獨居蜂，只有極少數社會性蜜蜂才會釀造大量蜂蜜。">
+          C. 所有的花蜂都會製造蜂蜜並住在六角形蜂巢裡
+        </button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </section>
+
+    <!-- 分頁底部導覽 -->
+    <div class="page-nav-footer">
+      <a href="index.html" class="btn btn-outline">← 返回學習目錄</a>
+      <a href="species.html" class="btn btn-primary">下一主題：2. 獨居蜂種類圖鑑 →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>🐝 <strong>獨居蜂探索館 Solitary Bees Learning Hub</strong>｜主題 01：生物上如何分類蜜蜂與蜂</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // 互動鑑定器切換邏輯
+    const cases = {
+      case1: {
+        title: "🔍 鑑定結果：獨居性花蜂 — 切葉蜂科（Megachilidae）",
+        desc: "<strong>分類解析：</strong>牠屬於<strong>蜜蜂總科 ＞ 花蜂類（Anthophila） ＞ 切葉蜂科</strong>。腹部的金黃色粉末是牠用「腹毛刷（Scopa）」採集的乾花粉，咬著葉片是為了在竹管裡捲成育嬰袋，是百分百吃素、溫馴且授粉力超強的獨居花蜂！"
+      },
+      case2: {
+        title: "🔍 鑑定結果：獨居性狩獵蜂 — 泥壺蜂／蜾蠃（胡蜂科 Eumeninae）",
+        desc: "<strong>分類解析：</strong>牠屬於<strong>胡蜂總科 ＞ 胡蜂科 ＞ 蜾蠃亞科（泥壺蜂）</strong>。雖然牠也單獨住在竹管或泥壺裡（屬於廣義獨居蜂旅館的常客），但牠們<strong>不採花粉育幼</strong>，而是捕捉蛾類幼蟲（毛毛蟲）並用螫針麻醉後封入泥室給幼蟲吃，是菜園與花園裡超棒的除蟲小幫手！"
+      },
+      case3: {
+        title: "🔍 鑑定結果：真社會性花蜂 — 蜜蜂屬（Genus Apis）",
+        desc: "<strong>分類解析：</strong>牠屬於<strong>蜜蜂總科 ＞ 花蜂類 ＞ 蜜蜂科 ＞ 蜜蜂屬（東方蜜蜂或西方蜜蜂）</strong>。牠們會用唾液與花蜜把花粉沾濕，固定在後腳的「花粉籃（Corbicula）」上帶回數萬隻同伴居住的大蜂巢。"
+      }
+    };
+
+    document.querySelectorAll("#id-helper-buttons .filter-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#id-helper-buttons .filter-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const key = btn.getAttribute("data-case");
+        const box = document.getElementById("id-helper-result");
+        if (cases[key] && box) {
+          box.innerHTML = `<h4>${cases[key].title}</h4><p>${cases[key].desc}</p>`;
+        }
+      });
+    });
+  </script>
+</body>
+</html>

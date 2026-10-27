@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>主題 02：獨居蜂的種類圖鑑｜獨居蜂探索館</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .species-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+    .species-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .species-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .species-banner {
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .species-body {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .meta-pill {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.22rem 0.65rem;
+      border-radius: 999px;
+      background: var(--bg-warm);
+      color: var(--forest-dark);
+    }
+    .species-detail-list {
+      list-style: none;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      border-top: 1px dashed var(--border-soft);
+      padding-top: 0.75rem;
+      margin-top: auto;
+    }
+    .species-detail-list li {
+      margin-bottom: 0.4rem;
+    }
+    .species-detail-list strong {
+      color: var(--text-dark);
+    }
+  </style>
+</head>
+<body data-page-topic="species">
+  <!-- 頂部導覽列 -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">🐝</span>
+        <span>獨居蜂探索館</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">📚 學習目錄</a></li>
+          <li><a href="classification.html" data-topic="classification"><span class="done-dot"></span>1. 蜜蜂與蜂的分類</a></li>
+          <li><a href="species.html" class="active" data-topic="species"><span class="done-dot"></span>2. 獨居蜂種類圖鑑</a></li>
+          <li><a href="foraging.html" data-topic="foraging"><span class="done-dot"></span>3. 覓食與超強授粉</a></li>
+          <li><a href="nesting.html" data-topic="nesting"><span class="done-dot"></span>4. 微型建築與築巢</a></li>
+          <li><a href="offspring.html" data-topic="offspring"><span class="done-dot"></span>5. 養育下一代</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 分頁標題區 -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">🏠 首頁目錄</a> <span>›</span> <span>主題 02：獨居蜂種類圖鑑</span>
+      </div>
+      <h1>🔍 獨居蜂的種類有哪些？認識大自然的六大工藝大師</h1>
+      <p>
+        全世界的獨居蜂多達近兩萬種！牠們不僅體型、顏色各異，最迷人的是每一類獨居蜂都演化出獨門的「工藝技能」——有的擅長剪裁葉片、有的擅長塗抹泥牆或採集松脂、有的則在土地與枯木中精雕細琢。
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <!-- 互動篩選器 -->
+    <section class="content-block">
+      <h2>🗂️ 依「築巢工藝與習性」篩選獨居蜂圖鑑</h2>
+      <p style="margin-bottom: 1rem; color: var(--text-muted);">點擊下方分類標籤，快速篩選不同類型的獨居蜂成員：</p>
+
+      <div class="filter-bar" id="species-filters">
+        <button class="filter-btn active" data-filter="all">🌟 顯示全部 (6 大代表類群)</button>
+        <button class="filter-btn" data-filter="leaf-resin">🍃 剪葉與樹脂工藝派（切葉蜂科）</button>
+        <button class="filter-btn" data-filter="mud">🧱 泥作砌牆派（壁蜂／泥壺蜂）</button>
+        <button class="filter-btn" data-filter="wood-ground">🪵 鑽木與掘地派（木蜂／青條花蜂／地花蜂）</button>
+      </div>
+
+      <div class="species-grid" id="species-list">
+        <!-- 1. 切葉蜂 -->
+        <article class="species-card" data-category="leaf-resin">
+          <div class="species-banner" style="background: #ecfdf5;">
+            <div>
+              <span style="font-size: 0.8rem; font-weight: 700; color: #047857;">切葉蜂科 Megachilidae</span>
+              <h3 style="margin: 0.15rem 0 0; color: #064e3b;">🍃 切葉蜂 (Leafcutter Bees)</h3>
+            </div>
+            <span style="font-size: 2.3rem;">✂️</span>
+          </div>
+          <div class="species-body">
+            <div class="meta-pills">
+              <span class="meta-pill">學名代表：<em>Megachile</em> 屬</span>
+              <span class="meta-pill">體長：約 8–15 mm</span>
+              <span class="meta-pill">食性：全素（花粉/花蜜）</span>
+            </div>
+            <p style="font-size: 0.94rem; color: var(--text-muted);">
+              大自然最神奇的裁縫師！如果你在玫瑰、九重葛或紫荊葉片邊緣發現<strong>極度工整的圓形或橢圓形切口</strong>，那正是切葉蜂媽媽用發達的大顎剪下的「壁紙」。牠們會抱著葉片飛回竹管或木孔，將葉片捲成雪茄狀的獨立育嬰囊。
+            </p>
+            <ul class="species-detail-list">
+              <li><strong>✨ 招牌特徵：</strong>頭部寬大、大顎如剪刀；腹部下方有金黃色或白色的濃密<strong>「腹毛刷」</strong>用來運載乾花粉。</li>
+              <li><strong>🏡 築巢孔徑偏好：</strong>直徑約 6–8 mm 的竹管、蘆葦管或樹洞。</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 2. 塗壁蜂 / 壁蜂 -->
+        <article class="species-card" data-category="mud">
+          <div class="species-banner" style="background: #fef3c7;">
+            <div>
+              <span style="font-size: 0.8rem; font-weight: 700; color: #b45309;">切葉蜂科 Megachilidae</span>
+              <h3 style="margin: 0.15rem 0 0; color: #78350f;">🧱 塗壁蜂／壁蜂 (Mason Bees)</h3>
+            </div>
+            <span style="font-size: 2.3rem;">🍯</span>
+          </div>
+          <div class="species-body">
+            <div class="meta-pills">
+              <span class="meta-pill">學名代表：<em>Osmia</em> 屬</span>
+              <span class="meta-pill">體長：約 8–12 mm</span>
+              <span class="meta-pill">果園授粉王</span>
+            </div>
+            <p style="font-size: 0.94rem; color: var(--text-muted);">
+              英文名為 Mason Bee（泥水匠蜂）。牠們不使用葉片，而是採集<strong>濕潤的泥土</strong>，在竹管裡築起一道道堅固的泥牆隔間。早春羽化的角額壁蜂等種類耐低溫，<strong>1 隻壁蜂為蘋果、梨、櫻桃授粉的效率可抵 100 隻西方蜜蜂！</strong>
+            </p>
+            <ul class="species-detail-list">
+              <li><strong>✨ 招牌特徵：</strong>體色常帶有深藍、古銅或墨綠金屬光澤，雌蜂臉部前方常有一對小角狀突起（用來抹平泥牆）。</li>
+              <li><strong>🏡 築巢孔徑偏好：</strong>直徑約 6–8 mm 的管洞，附近需有微濕泥土源。</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 3. 樹脂蜂 -->
+        <article class="species-card" data-category="leaf-resin">
+          <div class="species-banner" style="background: #ffedd5;">
+            <div>
+              <span style="font-size: 0.8rem; font-weight: 700; color: #c2410c;">切葉蜂科 Megachilidae</span>
+              <h3 style="margin: 0.15rem 0 0; color: #7c2d12;">💧 樹脂蜂 (Resin Bees)</h3>
+            </div>
+            <span style="font-size: 2.3rem;">🌲</span>
+          </div>
+          <div class="species-body">
+            <div class="meta-pills">
+              <span class="meta-pill">學名代表：<em>Megachile</em> (Chalicodoma) / <em>Heriades</em></span>
+              <span class="meta-pill">防水抗菌建材</span>
+            </div>
+            <p style="font-size: 0.94rem; color: var(--text-muted);">
+              雖然分類上也屬於切葉蜂科，但牠們不剪葉子，而是去採集松樹、楓香或龍腦香科植物分泌的<strong>黏稠天然樹脂（Resin）</strong>，有時還會混入小砂礫或木屑來砌牆與封口。樹脂硬化後不但完全防水，還具備天然抗菌與防螞蟻功效！
+            </p>
+            <ul class="species-detail-list">
+              <li><strong>✨ 招牌特徵：</strong>台灣常見如「台灣樹脂蜂（石蜂）」體型較大、胸部披覆紅褐色絨毛、翅膀呈深褐色。</li>
+              <li><strong>🏡 築巢孔徑偏好：</strong>依種類自 4 mm 至 10 mm 竹管皆有。</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 4. 青條花蜂 / 彩帶蜂 -->
+        <article class="species-card" data-category="wood-ground">
+          <div class="species-banner" style="background: #ccfbf1;">
+            <div>
+              <span style="font-size: 0.8rem; font-weight: 700; color: #0f766e;">蜜蜂科 Apidae</span>
+              <h3 style="margin: 0.15rem 0 0; color: #134e4a;">💎 青條花蜂／彩帶蜂 (Blue-banded Bees)</h3>
+            </div>
+            <span style="font-size: 2.3rem;">💠</span>
+          </div>
+          <div class="species-body">
+            <div class="meta-pills">
+              <span class="meta-pill">學名代表：<em>Amegilla</em> 屬</span>
+              <span class="meta-pill">體長：約 11–14 mm</span>
+              <span class="meta-pill">震動授粉高手</span>
+            </div>
+            <p style="font-size: 0.94rem; color: var(--text-muted);">
+              台灣平地與郊山最耀眼的明星獨居蜂！腹部有一圈圈閃耀金屬光澤的<strong>蒂芬妮藍綠色條紋</strong>，飛行速度快如小戰鬥機。最可愛的是，雄蜂與未築巢的個體到了傍晚，會群聚在枯枝上<strong>只用大顎咬住樹枝、六隻腳騰空睡覺</strong>！
+            </p>
+            <ul class="species-detail-list">
+              <li><strong>✨ 招牌特徵：</strong>擅長高頻率「震動授粉（Buzz Pollination）」，是番茄、茄子與野牡丹的最佳授粉者。</li>
+              <li><strong>🏡 築巢習性：</strong>地棲／土牆掘洞型（偏好乾燥鬆軟的土坡或紅磚縫隙）。</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 5. 木蜂與蘆蜂 -->
+        <article class="species-card" data-category="wood-ground">
+          <div class="species-banner" style="background: #f3e8ff;">
+            <div>
+              <span style="font-size: 0.8rem; font-weight: 700; color: #6d28d9;">蜜蜂科木蜂亞科 Xylocopinae</span>
+              <h3 style="margin: 0.15rem 0 0; color: #4c1d95;">🪵 木蜂與蘆蜂 (Carpenter Bees)</h3>
+            </div>
+            <span style="font-size: 2.3rem;">🪚</span>
+          </div>
+          <div class="species-body">
+            <div class="meta-pills">
+              <span class="meta-pill">學名代表：<em>Xylocopa</em>（大型） / <em>Ceratina</em>（小型）</span>
+              <span class="meta-pill">枯木木匠</span>
+            </div>
+            <p style="font-size: 0.94rem; color: var(--text-muted);">
+              大型木蜂（如白領蘆蜂、紅胸木蜂）圓滾滾且體長可達 2 公分以上，飛行時發出低沉嗡嗡聲，常被誤認為恐怖的大虎頭蜂；但其實牠們是<strong>吃全素的溫柔巨人</strong>！雌蜂會用強壯大顎在腐木、枯枝或竹竿上鑽出光滑隧道，並用木屑混唾液做隔間。
+            </p>
+            <ul class="species-detail-list">
+              <li><strong>✨ 招牌特徵：</strong>胸部毛茸茸，腹部背面常光滑發亮；小型蘆蜂（<em>Ceratina</em>）則偏好在芒草或修剪後的玫瑰枯枝髓心築巢。</li>
+              <li><strong>🏡 築巢習性：</strong>枯木鑽孔型／植物髓心挖掘型。</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- 6. 泥壺蜂 / 蜾蠃（廣義獨居蜂鄰居） -->
+        <article class="species-card" data-category="mud">
+          <div class="species-banner" style="background: #f1f5f9;">
+            <div>
+              <span style="font-size: 0.8rem; font-weight: 700; color: #334155;">胡蜂科蜾蠃亞科 Eumeninae</span>
+              <h3 style="margin: 0.15rem 0 0; color: #0f172a;">🏺 泥壺蜂／蜾蠃 (Potter & Mason Wasps)</h3>
+            </div>
+            <span style="font-size: 2.3rem;">🐛</span>
+          </div>
+          <div class="species-body">
+            <div class="meta-pills">
+              <span class="meta-pill">廣義獨居蜂旅館常客</span>
+              <span class="meta-pill">體長：約 10–22 mm</span>
+              <span class="meta-pill">食性：捕捉害蟲育幼</span>
+            </div>
+            <p style="font-size: 0.94rem; color: var(--text-muted);">
+              當你架設獨居蜂旅館時，最常入住的除了切葉蜂，就是泥壺蜂（蜾蠃）！雖然在生物分類上牠屬於胡蜂科，但牠<strong>完全過著獨居生活、不築紙質大蜂窩也不會群起攻擊人</strong>。有的會在枝條捏出精緻的「小泥壺」，有的則住進竹管並用泥巴封口。
+            </p>
+            <ul class="species-detail-list">
+              <li><strong>✨ 招牌特徵：</strong>腰部（第一腹節）細長如花瓶柄，成蟲吸食花蜜，但會捕捉農作物的鱗翅目幼蟲（毛毛蟲、螟蟲）給寶寶吃，是天然生物防治功臣！</li>
+              <li><strong>🏡 築巢孔徑偏好：</strong>直徑 5–10 mm 竹管，或於牆角、樹枝捏製泥壺。</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 補充：地花蜂與隧蜂 -->
+    <section class="content-block">
+      <h2>🌍 別忘了地底下的隱形多數：地花蜂科與隧蜂科</h2>
+      <div class="grid-2">
+        <div class="info-card">
+          <h4>⛏️ 地花蜂科 (Andrenidae / Mining Bees)</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            早春最早甦醒的獨居蜂之一！牠們不會住進人類做的竹管蜂旅館，因為牠們百分之百喜歡在<strong>陽光充足、排水良好的裸露沙質土壤</strong>上挖地道。地洞口常堆起一小圈像小火山口的細土粒。
+          </p>
+        </div>
+        <div class="info-card">
+          <h4>✨ 隧蜂科 (Halictidae / Sweat Bees)</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            體型多半嬌小（約 4–10 mm），許多種類帶有令人驚豔的<strong>翡翠綠或古銅色金屬光澤</strong>。因為有時會被人類皮膚上的汗水鹽分吸引而停在手臂上舔舐汗水，在英文裡被暱稱為「汗蜂（Sweat Bees）」。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 課後小測驗 -->
+    <section class="quiz-box">
+      <h3>🧠 主題二課後小測驗</h3>
+      <p style="margin-top: 0.35rem;">如果你在陽台的玫瑰葉片邊緣，發現好幾個邊緣超整齊的「半圓形缺口」，而且沒有看到毛毛蟲的糞便，請問最可能是哪一種獨居蜂的傑作？</p>
+      <div class="quiz-options">
+        <button class="quiz-option" data-correct="true" data-explain="答對了！切葉蜂媽媽會用大顎在短短幾秒內剪下圓形或橢圓形葉片，抱回竹管或縫隙裡捲成育嬰室，不會把整株植物吃光，反而會幫花園授粉喔！">
+          A. 切葉蜂（Leafcutter Bee）剪下葉片帶回巢管當作育嬰袋材料
+        </button>
+        <button class="quiz-option" data-correct="false" data-explain="塗壁蜂（壁蜂）使用的是濕泥土來砌牆，不會剪裁葉片喔！">
+          B. 塗壁蜂（Mason Bee）把葉片吃掉來分泌蜂蠟
+        </button>
+        <button class="quiz-option" data-correct="false" data-explain="青條花蜂是在土坡挖洞築巢，不會剪裁植物葉片。">
+          C. 青條花蜂（Blue-banded Bee）剪葉子當作棉被蓋在樹枝上睡覺
+        </button>
+      </div>
+      <div class="quiz-feedback"></div>
+    </section>
+
+    <!-- 分頁底部導覽 -->
+    <div class="page-nav-footer">
+      <a href="classification.html" class="btn btn-outline">← 上一主題：1. 蜜蜂與蜂的分類</a>
+      <a href="foraging.html" class="btn btn-primary">下一主題：3. 覓食與超強授粉 →</a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>🐝 <strong>獨居蜂探索館 Solitary Bees Learning Hub</strong>｜主題 02：獨居蜂種類圖鑑</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // 圖鑑分類篩選邏輯
+    document.querySelectorAll("#species-filters .filter-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#species-filters .filter-btn").forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const filter = btn.getAttribute("data-filter");
+        document.querySelectorAll("#species-list .species-card").forEach((card) => {
+          if (filter === "all" || card.getAttribute("data-category") === filter) {
+            card.style.display = "flex";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

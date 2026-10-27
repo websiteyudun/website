@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>獨居蜂探索館｜認識大自然最溫柔的授粉建築師</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 頂部導覽列 -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon">🐝</span>
+        <span>獨居蜂探索館</span>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">📚 學習目錄</a></li>
+          <li><a href="classification.html" data-topic="classification"><span class="done-dot"></span>1. 蜜蜂與蜂的分類</a></li>
+          <li><a href="species.html" data-topic="species"><span class="done-dot"></span>2. 獨居蜂種類圖鑑</a></li>
+          <li><a href="foraging.html" data-topic="foraging"><span class="done-dot"></span>3. 覓食與超強授粉</a></li>
+          <li><a href="nesting.html" data-topic="nesting"><span class="done-dot"></span>4. 微型建築與築巢</a></li>
+          <li><a href="offspring.html" data-topic="offspring"><span class="done-dot"></span>5. 養育下一代</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 英雄主視覺 -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="badge-pill">🌿 生態科普互動學習網</div>
+        <h1>不築大蜂窩、不產蜂蜜，<br />卻是守護地球的<span>「獨居蜂」</span></h1>
+        <p>
+          提到「蜂」，你腦中是否立刻浮現女王蜂、工蜂與六角形大蜂巢？其實在自然界超過 20,000 種蜂類中，<strong>高達 90% 以上都是「獨居蜂（Solitary Bees）」</strong>！牠們每一隻雌蜂都是獨立自主的單親媽媽，性情溫馴幾乎不螫人，更是森林與農作物不可或缺的授粉英雄。
+        </p>
+        <a href="#learning-directory" class="btn btn-primary">開始探索五大主題 ↓</a>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <strong>&gt; 90%</strong>
+            <span>全球蜂類屬於獨居性</span>
+          </div>
+          <div class="stat-box">
+            <strong>1 抵 100</strong>
+            <span>單隻壁蜂果樹授粉效率</span>
+          </div>
+          <div class="stat-box">
+            <strong>極溫馴</strong>
+            <span>無蜂巢需要保衛、幾乎不叮人</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 視覺插畫卡片 -->
+      <div class="hero-visual">
+        <svg viewBox="0 0 360 270" width="100%" height="auto" role="img" aria-label="獨居蜂與竹管巢穴插畫">
+          <defs>
+            <linearGradient id="skyGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#fef3c7" />
+              <stop offset="100%" stop-color="#e8f3e6" />
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="360" height="270" rx="16" fill="url(#skyGrad)" />
+          <!-- 竹管巢示意 -->
+          <rect x="30" y="45" width="145" height="36" rx="8" fill="#d97706" opacity="0.25" stroke="#b45309" stroke-width="2" />
+          <rect x="38" y="51" width="30" height="24" rx="4" fill="#fde68a" />
+          <circle cx="53" cy="63" r="6" fill="#f59e0b" />
+          <line x1="74" y1="46" x2="74" y2="80" stroke="#78350f" stroke-width="4" />
+          <rect x="82" y="51" width="30" height="24" rx="4" fill="#fde68a" />
+          <circle cx="97" cy="63" r="6" fill="#f59e0b" />
+          <line x1="118" y1="46" x2="118" y2="80" stroke="#78350f" stroke-width="4" />
+          <text x="32" y="36" font-size="12" font-weight="bold" fill="#78350f">🎍 竹管巢室與花粉團</text>
+
+          <!-- 花朵 -->
+          <g transform="translate(255, 175)">
+            <line x1="0" y1="0" x2="0" y2="75" stroke="#2d5a27" stroke-width="6" stroke-linecap="round" />
+            <ellipse cx="-18" cy="35" rx="16" ry="8" transform="rotate(-25 -18 35)" fill="#4ade80" />
+            <circle cx="-22" cy="-10" r="18" fill="#fb7185" />
+            <circle cx="22" cy="-10" r="18" fill="#fb7185" />
+            <circle cx="0" cy="-28" r="18" fill="#fb7185" />
+            <circle cx="-14" cy="16" r="18" fill="#fb7185" />
+            <circle cx="14" cy="16" r="18" fill="#fb7185" />
+            <circle cx="0" cy="-2" r="15" fill="#facc15" stroke="#ca8a04" stroke-width="3" />
+          </g>
+
+          <!-- 獨居蜂插畫 -->
+          <g transform="translate(175, 125) rotate(-12)">
+            <!-- 翅膀 -->
+            <ellipse cx="-5" cy="-24" rx="24" ry="11" transform="rotate(-20 -5 -24)" fill="#ffffff" opacity="0.82" stroke="#94a3b8" stroke-width="1.5" />
+            <ellipse cx="10" cy="-22" rx="20" ry="9" transform="rotate(15 10 -22)" fill="#ffffff" opacity="0.75" stroke="#94a3b8" stroke-width="1.5" />
+            <!-- 腹部與腹毛刷花粉 -->
+            <ellipse cx="-26" cy="4" rx="24" ry="16" fill="#232a21" />
+            <path d="M-38,-8 Q-26,4 -38,16" stroke="#f59e0b" stroke-width="5" fill="none" />
+            <path d="M-24,-11 Q-12,4 -24,19" stroke="#f59e0b" stroke-width="5" fill="none" />
+            <!-- 腹下金黃色花粉刷 -->
+            <ellipse cx="-26" cy="17" rx="18" ry="5" fill="#facc15" />
+            <!-- 胸部與頭部 -->
+            <circle cx="2" cy="2" r="15" fill="#52525b" />
+            <circle cx="20" cy="3" r="11" fill="#232a21" />
+            <circle cx="23" cy="0" r="3.5" fill="#fef08a" />
+            <!-- 觸角 -->
+            <path d="M27,-4 Q36,-16 43,-12" stroke="#232a21" stroke-width="2.5" fill="none" stroke-linecap="round" />
+            <path d="M29,1 Q39,-8 45,-3" stroke="#232a21" stroke-width="2.5" fill="none" stroke-linecap="round" />
+          </g>
+          <text x="18" y="248" font-size="13" font-weight="bold" fill="#1e3f1a">✨ 腹部沾滿金黃乾花粉的獨居蜂媽媽</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- 學習進度橫幅 -->
+  <div class="progress-banner">
+    <div class="progress-card">
+      <div class="progress-info">
+        <span style="font-size: 1.5rem;">🎓</span>
+        <div>
+          <strong style="display: block; color: var(--forest-dark);">你的獨居蜂學習進度</strong>
+          <span id="progress-count" style="font-size: 0.88rem; color: var(--text-muted);">0 / 5 主題已完成 (0%)</span>
+        </div>
+      </div>
+      <div class="progress-bar-wrap" aria-label="學習進度條">
+        <div id="progress-fill" class="progress-bar-fill"></div>
+      </div>
+      <button id="reset-progress-btn" class="btn btn-outline" style="padding: 0.45rem 0.95rem; font-size: 0.85rem;">重置紀錄</button>
+    </div>
+  </div>
+
+  <!-- 主題目錄區 -->
+  <main class="container" id="learning-directory">
+    <div class="section-header">
+      <h2>📚 選擇你想探索的學習主題</h2>
+      <p>點擊下方任一主題卡片，即可進入專屬的互動學習分頁，深入了解獨居蜂的奇妙世界。</p>
+    </div>
+
+    <div class="topic-grid">
+      <!-- 主題 1 -->
+      <a href="classification.html" class="topic-card" data-topic="classification" style="--card-accent: #2d5a27;">
+        <div>
+          <div class="topic-top">
+            <span class="topic-number">主題 01｜生物分類</span>
+            <span class="topic-status">尚未閱讀</span>
+          </div>
+          <div class="topic-icon">🧬</div>
+          <h3>生物上如何分類「蜜蜂」與「蜂」？</h3>
+          <p>
+            「蜜蜂」其實只是「蜂類」家族的一小支！帶你從膜翅目家族樹出發，搞懂素食的「花蜂（Apiformes）」與吃葷的「狩獵蜂（Wasps）」，以及社會性與獨居性的關鍵差異。
+          </p>
+          <ul class="topic-tags">
+            <li>膜翅目演化樹</li>
+            <li>花蜂 vs 胡蜂/泥壺蜂</li>
+            <li>社會性 vs 獨居性</li>
+          </ul>
+        </div>
+        <div class="topic-cta">進入主題一學習分頁 <span>→</span></div>
+      </a>
+
+      <!-- 主題 2 -->
+      <a href="species.html" class="topic-card" data-topic="species" style="--card-accent: #d97706;">
+        <div>
+          <div class="topic-top">
+            <span class="topic-number">主題 02｜物種圖鑑</span>
+            <span class="topic-status">尚未閱讀</span>
+          </div>
+          <div class="topic-icon">🔍</div>
+          <h3>獨居蜂的種類有哪些？</h3>
+          <p>
+            認識台灣與世界各地最迷人的獨居蜂成員：會剪圓葉片的「切葉蜂」、用泥巴砌牆的「塗壁蜂」、在枯木鑽洞的「木蜂」、閃耀藍綠金屬光的「青條花蜂」，以及常見鄰居「泥壺蜂」。
+          </p>
+          <ul class="topic-tags">
+            <li>切葉蜂科</li>
+            <li>塗壁蜂 / 壁蜂</li>
+            <li>木蜂與青條花蜂</li>
+            <li>互動分類篩選</li>
+          </ul>
+        </div>
+        <div class="topic-cta">進入主題二學習分頁 <span>→</span></div>
+      </a>
+
+      <!-- 主題 3 -->
+      <a href="foraging.html" class="topic-card" data-topic="foraging" style="--card-accent: #0d9488;">
+        <div>
+          <div class="topic-top">
+            <span class="topic-number">主題 03｜覓食與授粉</span>
+            <span class="topic-status">尚未閱讀</span>
+          </div>
+          <div class="topic-icon">🌸</div>
+          <h3>如何覓食？揭開超強授粉絕技</h3>
+          <p>
+            為什麼 1 隻壁蜂的授粉效率能抵過 100 隻西方蜜蜂？認識獨居蜂特殊的「腹毛刷（Scopa）」乾花粉採集法、讓番茄結果的「震動授粉（Buzz Pollination）」，以及狩獵型獨居蜂的麻醉絕技。
+          </p>
+          <ul class="topic-tags">
+            <li>腹毛刷 vs 花粉籃</li>
+            <li>震動授粉互動模擬</li>
+            <li>花粉糧球製作</li>
+          </ul>
+        </div>
+        <div class="topic-cta">進入主題三學習分頁 <span>→</span></div>
+      </a>
+
+      <!-- 主題 4 -->
+      <a href="nesting.html" class="topic-card" data-topic="nesting" style="--card-accent: #b45309;">
+        <div>
+          <div class="topic-top">
+            <span class="topic-number">主題 04｜築巢建築</span>
+            <span class="topic-status">尚未閱讀</span>
+          </div>
+          <div class="topic-icon">🎋</div>
+          <h3>如何築巢？大自然的微型建築師</h3>
+          <p>
+            獨居蜂不分泌蜂蠟蓋六角形大蜂窩，那牠們住在哪裡？探索佔 70% 的「地棲掘洞派」與 30% 的「竹管洞穴租屋派」，並透過互動剖面圖解剖竹管巢室的隔間秘密！
+          </p>
+          <ul class="topic-tags">
+            <li>地棲型 vs 洞穴型</li>
+            <li>互動竹管巢室剖面</li>
+            <li>獨居蜂旅館指南</li>
+          </ul>
+        </div>
+        <div class="topic-cta">進入主題四學習分頁 <span>→</span></div>
+      </a>
+
+      <!-- 主題 5 -->
+      <a href="offspring.html" class="topic-card" data-topic="offspring" style="--card-accent: #e11d48;">
+        <div>
+          <div class="topic-top">
+            <span class="topic-number">主題 05｜繁衍與育幼</span>
+            <span class="topic-status">尚未閱讀</span>
+          </div>
+          <div class="topic-icon">🥚</div>
+          <h3>如何養育下一代？內建性別控制的母愛</h3>
+          <p>
+            獨居蜂媽媽如何在沒有工蜂幫忙下獨自養大孩子？揭開神奇的「內建性別決定機制」——為什麼竹管內側總是放女兒（雌蜂）、外側放兒子（雄蜂）？一探從花粉便當到破繭羽化的生命週期。
+          </p>
+          <ul class="topic-tags">
+            <li>單倍二倍體性別控制</li>
+            <li>內雌外雄排列智慧</li>
+            <li>四季生命週期互動</li>
+          </ul>
+        </div>
+        <div class="topic-cta">進入主題五學習分頁 <span>→</span></div>
+      </a>
+    </div>
+
+    <!-- 目錄頁底部的快速觀念破除迷思 -->
+    <section class="content-block" style="margin-top: 3rem;">
+      <h2>💡 進入分頁前，先破除三個常見的「蜂」迷思！</h2>
+      <div class="grid-3" style="margin-top: 1.25rem;">
+        <div class="info-card">
+          <h4>❓ 迷思一：所有的蜂都會採花蜜做「蜂蜜」？</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            <strong>真相：</strong>只有少數需要整個群體度冬的社會性蜂類（如東方蜜蜂、西方蜜蜂、無螫蜂）才會大量釀造並儲存濃縮蜂蜜。獨居蜂採集花蜜主要是混合花粉捏成「花粉麵包（Pollen Loaf）」，作為幼蟲的固態便當！
+          </p>
+        </div>
+        <div class="info-card">
+          <h4>❓ 迷思二：看到蜂在花園飛，很容易被群起攻擊？</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            <strong>真相：</strong>蜜蜂或虎頭蜂之所以兇猛，是因為牠們有龐大的蜂巢、幼蟲與儲蜜需要「保衛」。獨居蜂沒有蜂王也沒有工蜂部隊，且多數獨居花蜂的螫針沒有倒鉤、毒性極微，除非被你徒手緊抓，否則完全不會主動叮人。
+          </p>
+        </div>
+        <div class="info-card">
+          <h4>❓ 迷思三：拯救西方蜜蜂就等於拯救所有授粉昆蟲？</h4>
+          <p style="font-size: 0.93rem; color: var(--text-muted);">
+            <strong>真相：</strong>西方蜜蜂雖然重要，但在許多地區屬於農業引進物種。真正撐起本土野生植物與特定作物（如茄科、果樹）授粉多樣性的，其實是成千上萬種原生的「獨居蜂」！
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>🐝 <strong>獨居蜂探索館 Solitary Bees Learning Hub</strong>｜以 HTML5 打造的生態科普互動學習網站</p>
+    <p style="margin-top: 0.4rem; font-size: 0.82rem;">
+      快速前往：
+      <a href="classification.html">1. 生物分類</a> ·
+      <a href="species.html">2. 獨居蜂種類</a> ·
+      <a href="foraging.html">3. 覓食授粉</a> ·
+      <a href="nesting.html">4. 築巢建築</a> ·
+      <a href="offspring.html">5. 養育下一代</a>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
